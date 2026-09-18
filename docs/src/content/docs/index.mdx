@@ -1,0 +1,67 @@
+---
+title: EPS RH850 — AUTOSAR Documentation
+description: Documentation for the BMW FAAR WE Electric Power Steering system (Renesas RH850, AUTOSAR, ASIL D).
+template: splash
+hero:
+  title: Electric Power Steering — BMW FAAR WE
+  tagline: AUTOSAR firmware documentation for the Renesas RH850 EPS controller (ISO 26262 ASIL D, FlexRay, UDS).
+  actions:
+    - text: Browse the modules
+      link: general/
+      icon: right-arrow
+    - text: Vector vs in-house guide
+      link: general/origin-guide/
+      icon: open-book
+    - text: Build system
+      link: general/build-system/
+      icon: setting
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Project overview
+
+Complete Electric Power Steering (EPS) firmware for the **BMW FAAR WE**
+platform: precise power-assisted steering control, electric-motor power
+management and communication security on a **Renesas RH850/P1x**
+microcontroller, developed to **AUTOSAR** and **ISO 26262 ASIL D**.
+
+- **211 documented software modules** organised by AUTOSAR layer.
+- **Third-party vs in-house code is labelled on every page**:
+  Vector MICROSAR, BMW BAC, Renesas MCAL, or Nexteer custom logic
+  (see the [origin guide](general/origin-guide/)).
+- **Word/PDF sources converted**: per-module design documents (MDD),
+  integration manuals, Vector Technical References and release notes are
+  published as searchable excerpts linked from each module page
+  ([full inventory](general/doc-inventory/)).
+
+<CardGrid>
+  <Card title="Application Software" icon="puzzle">
+    Steering functions (`SF*`), BMW customer functions (`CF*`),
+    FlexRay message slots (`MM*`) and manufacturing services (`NM*`).
+    [Open ASW](asw/)
+  </Card>
+  <Card title="Complex Drivers" icon="setting">
+    MCU/ADC/DMA/motor-angle drivers (`CM*`), EPS sensing and actuation
+    (`ES*`), fault injection (`DF*`).
+    [Open CDD](cdd/)
+  </Card>
+  <Card title="Basic Software" icon="document">
+    Vector MICROSAR COM, memory, diagnostics and system services plus
+    BMW BAC platform modules.
+    [Open BSW](bsw/)
+  </Card>
+  <Card title="MCAL · RTE · OS" icon="open-book">
+    Renesas RH850 drivers, the Vector MICROSAR RTE and OS.
+    [MCAL](mcal/) · [RTE](rte/) · [OS](os/)
+  </Card>
+</CardGrid>
+
+## Conventions used in this site
+
+- Each module page states its **AUTOSAR layer**, **origin badge**
+  (Vector / BMW / Renesas / Custom), key files, public API excerpt,
+  dependencies and converted documents.
+- Converted excerpts are capped and lose exact layout/diagrams; the
+  repository sources remain authoritative (linked from every page).
+- Assumptions made while documenting are stated inline as such.

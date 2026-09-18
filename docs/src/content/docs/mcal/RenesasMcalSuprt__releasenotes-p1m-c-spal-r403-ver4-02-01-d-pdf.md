@@ -1,0 +1,277 @@
+---
+title: 'RenesasMcalSuprt — Releasenotes_P1M-C_SPAL_R403_Ver4.02.01.D'
+description: 'Converted PDF document Releasenotes_P1M-C_SPAL_R403_Ver4.02.01.D.pdf from module RenesasMcalSuprt.'
+sidebar:
+  hidden: true
+---
+
+> **Source:** `Releasenotes_P1M-C_SPAL_R403_Ver4.02.01.D.pdf` (PDF, 505 KB, in-module path `doc/`)
+>
+> Converted from PDF with text extraction; layout, vector diagrams and scanned figures are not preserved. See the source PDF in the repository for the authoritative content.
+>
+> pages: 15; title: -; author: Joyce Rathna Jothi N
+
+## Converted content
+
+### Page 1
+
+Renesas Electronics Release Date: 30/June/2017 
+Page 1 of 15 
+Release Notes for RENESAS RH850/P1M-C 
+RENESAS_SW-AUTOSAR-P1M-C: MCAL Ver4.02.01.D 
+Beta Quality 
+1.1 Purpose 
+To deliver AUTOSAR R4.0.3 MCAL software for P1M-C Ver4.02.01.D release using the 
+following inputs. 
+Device Manual: r01uh0517ej0121-rh850p1x-c_Open.pdf 
+Device File: DF-RH850P1x-C-EE_V121_1.zip 
+Operating Precautions: R01TU0087ED0103_RH850P1M-C.pdf 
+Modules supported: DIO and PORT 
+1.2 Package information 
+Product RH850/P1x-C 
+Variant P1M-C 
+Product Release Version Ver4.02.01.D 
+AUTOSAR Specification Version R4.0.3 
+Device tested on R7F701372 
+Devices supported R7F701373, R7F701374 
+Release Date 30-June-2017 
+ 
+1.3 Tools 
+1.3.1 GHS 
+Tool Version Options 
+Green Hills Multi multi_616 
+Compiler: 2015.1.7 
+Executor Version: 
+V2.21.00.06 
+X1X/common_platform/generic/compiler/4.0.3/gh
+s/make/ghs_rh850_r4.0.3_defs.mak
+
+### Page 2
+
+Renesas Electronics Release Date: 30/June/2017 
+Page 2 of 15 
+850eserv2 Version: V2.030 
+1.3.2 Configuration code generator 
+Tool Version Options 
+ECU Spectrum 4.0.14 - 
+1.3.3 Additional software 
+Tool Version Options 
+AMDC 1.0.13 - 
+MCAL Gen 2.06.03 - 
+QAC source code Analyser 8.1.1-R - 
+1.4 Generic Information 
+1.4.1 Release Target 
+Processor R7F701373, R7F701374 
+Module Generic 
+Getting Started Document for P1x-C MCAL Driver R20UT3828EJ0101-AUTOSAR.pdf – V1.0.3 
+AUTOSAR Modules Overview R20UT3827EJ0101-AUTOSAR.pdf – V1.0.3 
+Date 30-June-2017 
+1.4.2 Release Items 
+Filename Version Change Description 
+Common Files 
+ComStack_Types.h 1.0.0 No change for release Ver4.02.01.D 
+Std_Types.h 1.0.1 No change for release Ver4.02.01.D 
+Platform_Types.h 1.0.0 No change for release Ver4.02.01.D 
+rh850_Types.h 1.0.1 No change for release Ver4.02.01.D 
+Compiler Files 
+MemMap.h 1.0.4 
+Following changes are made in Ver4.02.01.D: 
+1. As per ARDAAAF-2059,
+
+### Page 3
+
+Renesas Electronics Release Date: 30/June/2017 
+Page 3 of 15 
+PREFIX and INIT POLICY are modified for the 
+memory sections of RAMTST module. 
+2. As per ARDAAAF-2175, Removed unwanted memory section 
+RAMTST_START_SEC_CODE_FAST and added memory section 
+RAMTST_59_RENESAS_START_SEC_APPL_CODE for 
+RAMTST 
+module. 
+3. As per ARDAAAF-2053, NOININT sections are changed as 
+NO_INIT and FR_59_RENESAS_START_SEC_DBTOC_DATA_ 
+UNSPECIFIED has been changed as FR_59_RENESAS_START_ 
+SEC_DBTOC_DATA_UNSPECIFIED. 
+4. As per ARDAAAF-2177, following sections are removed 
+FR_59_RENESAS_START_SEC_VAR_NO_INIT_BOOLEAN 
+FR_59_RENESAS_STOP_SEC_VAR_NO_INIT_BOOLEAN 
+FR_59_RENESAS_START_SEC_VAR_FAST_BOOLEAN 
+FR_59_RENESAS_STOP_SEC_VAR_FAST_BOOLEAN 
+FR_59_RENESAS_START_SEC_VAR_8 
+FR_59_RENESAS_STOP_SEC_VAR_8 
+FR_59_RENESAS_START_SEC_VAR_NO_INIT_8 
+FR_59_RENESAS_STOP_SEC_VAR_NO_INIT_8 
+FR_59_RENESAS_START_SEC_VAR_FAST_8 
+FR_59_RENESAS_STOP_SEC_VAR_FAST_8 
+FR_59_RENESAS_START_SEC_VAR_16 
+FR_59_RENESAS_STOP_SEC_VAR_16 
+FR_59_RENESAS_START_SEC_VAR_FAST_16 
+FR_59_RENESAS_STOP_SEC_VAR_FAST_16 
+FR_59_RENESAS_START_SEC_VAR_32 
+FR_59_RENESAS_STOP_SEC_VAR_32 
+FR_59_RENESAS_START_SEC_VAR_FAST_32 
+FR_59_RENESAS_STOP_SEC_VAR_FAST_32 
+FR_59_RENESAS_START_SEC_VAR_NO_INIT_UNSPECIFIED 
+FR_59_RENESAS_STOP_SEC_VAR_NO_INIT_UNSPECIFIED 
+FR_59_RENESAS_START_SEC_VAR_POWER_ON_INIT_UNSP
+ECIFIED 
+FR_59_RENESAS_STOP_SEC_VAR_POWER_ON_INIT_UNSPE
+CIFIED
+
+### Page 4
+
+Renesas Electronics Release Date: 30/June/2017 
+Page 4 of 15 
+FR_59_RENESAS_START_SEC_VAR_FAST_UNSPECIFIED 
+FR_59_RENESAS_STOP_SEC_VAR_FAST_UNSPECIFIED 
+FR_59_RENESAS_START_SEC_CONFIG_VAR_NO_INIT_UNS
+PECIFIED 
+FR_59_RENESAS_STOP_SEC_CONFIG_VAR_NO_INIT_UNSP
+ECIFIED 
+FR_59_RENESAS_START_SEC_CONST_BOOLEAN 
+FR_59_RENESAS_STOP_SEC_CONST_BOOLEAN 
+FR_59_RENESAS_START_SEC_CONST_8 
+FR_59_RENESAS_STOP_SEC_CONST_8 
+FR_59_RENESAS_START_SEC_CONST_16 
+FR_59_RENESAS_STOP_SEC_CONST_16 
+FR_59_RENESAS_START_SEC_CONFIG_CONST_UNSPECIFI
+ED 
+FR_59_RENESAS_STOP_SEC_CONFIG_CONST_UNSPECIFIE
+D 
+FR_59_RENESAS_START_SEC_DBTOC_CONFIG_CONST_UN
+SPECIFIED 
+FR_59_RENESAS_STOP_SEC_DBTOC_CONFIG_CONST_UNS
+PECIFIED 
+FR_59_RENESAS_START_SEC_CODE 
+FR_59_RENESAS_STOP_SEC_CODE 
+FR_59_RENESAS_START_SEC_STATIC_CODE 
+FR_59_RENESAS_STOP_SEC_STATIC_CODE 
+FR_59_RENESAS_START_SEC_CODE_FAST 
+FR_59_RENESAS_STOP_SEC_CODE_FAST 
+5. As per ARDAAAF-2050, NOINIT sections are changed as 
+NO_INIT, PREFIX are added, 
+ETH_59_RENESAS_START_SEC_DBTOC_DATA_UNSPECIFIE
+D 
+has been changed as ETH_59_RENESAS_START_SEC_DATA_ 
+UNSPECIFIED, ETH_59_START_SEC_APPL_CODE to 
+ETH_59_RENESAS_START_SEC_CODE_FAST and following 
+ROM 
+memory tag updated: 
+ETH_PUBLIC_CODE_ROM 
+ETH_PRIVATE_CODE_ROM 
+ETH_BUFFER_CODE_ROM
+
+### Page 5
+
+Renesas Electronics Release Date: 30/June/2017 
+Page 5 of 15 
+6. As per ARDAAAF-2174, following sections are removed 
+ETH_59_START_SEC_VAR_NOINIT_BOOLEAN 
+ETH_59_START_SEC_VAR_FAST_BOOLEAN 
+ETH_59_START_SEC_VAR_8 
+ETH_59_START_SEC_VAR_FAST_8 
+ETH_59_START_SEC_VAR_NOINIT_16 
+ETH_59_START_SEC_VAR_FAST_16 
+ETH_59_START_SEC_VAR_NOINIT_32 
+ETH_59_START_SEC_VAR_FAST_32 
+ETH_59_START_SEC_CONFIG_VAR_NOINIT_UNSPECIFIED 
+ETH_59_START_SEC_CONST_BOOLEAN 
+ETH_59_START_SEC_CONST_8 
+ETH_59_START_SEC_CONST_16 
+ETH_59_START_SEC_CONST_32 
+ETH_59_START_SEC_SCHEDULER_CODE 
+ETH_59_STOP_SEC_VAR_NOINIT_BOOLEAN 
+ETH_59_STOP_SEC_VAR_FAST_BOOLEAN 
+ETH_59_STOP_SEC_VAR_8 
+ETH_59_STOP_SEC_VAR_FAST_8 
+ETH_59_STOP_SEC_VAR_NOINIT_16 
+ETH_59_STOP_SEC_VAR_FAST_16 
+ETH_59_STOP_SEC_VAR_NOINIT_32 
+ETH_59_STOP_SEC_VAR_FAST_32 
+ETH_59_STOP_SEC_CONFIG_VAR_NOINIT_UNSPECIFIED 
+ETH_59_STOP_SEC_CONST_BOOLEAN 
+ETH_59_STOP_SEC_CONST_8 
+ETH_59_STOP_SEC_CONST_16 
+ETH_59_STOP_SEC_CONST_32 
+ETH_59_STOP_SEC_SCHEDULER_CODE 
+7. As per ARDAAAF-2178, following sections are removed 
+FLSTST_START_SEC_VAR_BOOLEAN 
+FLSTST_START_SEC_VAR_NOINIT_BOOLEAN 
+FLSTST_START_SEC_VAR_FAST_BOOLEAN 
+FLSTST_START_SEC_VAR_8 
+FLSTST_START_SEC_VAR_NOINIT_8
+
+### Page 6
+
+Renesas Electronics Release Date: 30/June/2017 
+Page 6 of 15 
+FLSTST_START_SEC_VAR_FAST_8 
+FLSTST_START_SEC_VAR_16 
+FLSTST_START_SEC_VAR_NOINIT_16 
+FLSTST_START_SEC_VAR_FAST_16 
+FLSTST_START_SEC_VAR_NOINIT_32 
+FLSTST_START_SEC_VAR_FAST_32 
+FLSTST_START_SEC_VAR_FAST_UNSPECIFIED 
+FLSTST_START_SEC_CONFIG_VAR_NOINIT_UNSPECIFIED 
+FLSTST_START_SEC_SCHEDULER_CODE 
+FLSTST_START_SEC_BUFFER_CODE 
+FLSTST_STOP_SEC_VAR_BOOLEAN 
+FLSTST_STOP_SEC_VAR_NOINIT_BOOLEAN 
+FLSTST_STOP_SEC_VAR_FAST_BOOLEAN 
+FLSTST_STOP_SEC_VAR_8 
+FLSTST_STOP_SEC_VAR_NOINIT_8 
+FLSTST_STOP_SEC_VAR_FAST_8 
+FLSTST_STOP_SEC_VAR_16 
+FLSTST_STOP_SEC_VAR_NOINIT_16 
+FLSTST_STOP_SEC_VAR_FAST_16 
+FLSTST_STOP_SEC_VAR_NOINIT_32 
+FLSTST_STOP_SEC_VAR_FAST_32 
+FLSTST_STOP_SEC_VAR_FAST_UNSPECIFIED 
+FLSTST_STOP_SEC_CONFIG_VAR_NOINIT_UNSPECIFIED 
+FLSTST_STOP_SEC_SCHEDULER_CODE 
+FLSTST_STOP_SEC_BUFFER_CODE 
+8. As per ARDAAAF-2052, 
+PREFIX and INIT POLICY are modified for the 
+memory sections of FLSTST module. 
+9. As per ARDAAAF-2055, 
+PREFIX and INIT POLICY are modified for the 
+memory sections of LIN module. 
+10. As per ARDAAAF-2176, 
+LIN_START_SEC_DBTOC_DATA_UNSPECIFIED 
+LIN_STOP_SEC_DBTOC_DATA_UNSPECIFIED was removed. 
+11. As per ARDAAAF-2473,
+
+### Page 7
+
+Renesas Electronics Release Date: 30/June/2017 
+Page 7 of 15 
+SPI_59_RENESAS_START_SEC_PUBLIC_CODE, 
+SPI_59_RENESAS_START_SEC_PRIVATE_CODE and 
+SPI_59_RENESAS_START_SEC_CODE_FAST were updated. 
+Compiler.h 1.0.1 No change for release Ver4.02.01.D 
+Compiler_Cfg.h 1.0.2 No change for release Ver4.02.01.D 
+Common Stubs - Stub files required to run the sample application of the driver. 
+Getting Started MCAL Driver User Manual 
+R20UT3828EJ0101-
+AUTOSAR.pdf 1.0.3 No change for release Ver4.02.01.D 
+Module Overview User Manual 
+R20UT3827EJ0101-
+AUTOSAR.pdf 1.0.3 No change for release Ver4.02.01.D 
+1.4.3 Fixed Issues 
+ID Description 
+NA Please refer to the Fixed issues list as shared from Renesas 
+Ref. P1xC_FixedIssues_Ver4.02.01.D.xlsx 
+1.4.4 Known Issues 
+ID Description 
+NA Please refer to the Known issues list as shared from Renesas 
+Ref. P1xC_OpenMarket_KnownIssues_CW26_2017.xlsx
+
+### Page 8
+
+Renesas Electronics Release Date: 30/June/2017 
+Page 8 of 15 
+1.5 Module Index 
+
+
+*Excerpt: first 8 of 15 pages shown.*
